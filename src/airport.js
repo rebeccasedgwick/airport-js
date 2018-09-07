@@ -9,3 +9,7 @@ Airport.prototype.hangar = function() {
 Airport.prototype.land = function(plane) {
   return (this.landedPlanes.push(plane))
 };
+
+Airport.prototype.takeOff = function(plane) {
+  this.landedPlanes.splice((this.landedPlanes.indexOf(plane)), 1);
+}
